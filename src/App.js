@@ -1,5 +1,5 @@
 import styled, { ThemeProvider } from "styled-components";
-import { useState, useEffect } from "react";
+import { useState} from "react";
 import { darkTheme } from "./utils/Themes";
 import Navbar from "./components/Navbar";
 import { BrowserRouter } from "react-router-dom";
@@ -37,7 +37,7 @@ const Wrapper = styled.div`
 `;
 
 function App() {
-  const [darkMode, setDarkMode] = useState(true);
+  // const [darkMode, setDarkMode] = useState(true);
   const [openModal, setOpenModal] = useState({ state: false, project: null });
   console.log(openModal)
   return (

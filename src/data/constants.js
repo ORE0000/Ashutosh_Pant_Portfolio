@@ -364,7 +364,7 @@ export const projects = [
       "A personal portfolio website showcasing my work, skills, and accomplishments. Built with modern web technologies to create an interactive and responsive user experience.",
     image:
       "https://raw.githubusercontent.com/ORE0000/MY-first-Portfolio/main/src/assets/MyPortfolio.png",
-    tags: ["Next.js", "Three.js", "Framer Motion", , "Tailwind CSS"],
+    tags: ["Next.js", "Three.js", "Framer Motion","Tailwind CSS"],
     category: "web app",
     github: "https://github.com/ORE0000/MY-first-Portfolio.git",
     webapp: "https://ashutoshpant-myportfolio.netlify.app/",
