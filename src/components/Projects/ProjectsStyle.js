@@ -21,7 +21,7 @@ const slideUpElastic = keyframes`
 `;
 
 // Floating animation for active buttons
-const floatAnimation = keyframes` // eslint-disable-line no-unused-vars
+const floatAnimation = keyframes`
   0%, 100% {
     transform: translateY(0px) scale(1);
   }
@@ -200,7 +200,7 @@ export const ToggleButton = styled.div`
   ${({ active }) =>
     active &&
     `
-      animation: floatAnimation 3s ease-in-out infinite;
+      animation: ${floatAnimation} 3s ease-in-out infinite;
       box-shadow: 
         0 4px 20px ${({ theme }) => theme.primary + "40"},
         inset 0 1px 0 rgba(255, 255, 255, 0.2);
