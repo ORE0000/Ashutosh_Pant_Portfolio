@@ -157,18 +157,18 @@ const ResumeButton = styled.a`
     hsla(271, 100%, 50%, 1) 0%,
     hsla(294, 100%, 50%, 1) 100%
   );
-  box-shadow: 20px 20px 60px #1f2634, -20px -20px 60px #1f2634;
+  box-shadow: 20px 20px 60px ${({ theme }) => (theme.isDark ? '#1f2634' : 'rgba(0, 0, 0, 0.2)')}, 
+              -20px -20px 60px ${({ theme }) => (theme.isDark ? '#1f2634' : 'rgba(0, 0, 0, 0.2)')};
   border-radius: 50px;
   font-weight: 600;
   font-size: 20px;
 
      &:hover {
         transform: scale(1.05);
-    transition: all 0.4s ease-in-out;
-    box-shadow:  20px 20px 60px #1F2634,
-    filter: brightness(1);
+        transition: all 0.4s ease-in-out;
+        box-shadow: 20px 20px 60px ${({ theme }) => (theme.isDark ? '#1f2634' : 'rgba(0, 0, 0, 0.3)')};
+        filter: brightness(1);
     }    
-    
     
     @media (max-width: 640px) {
         padding: 12px 0;

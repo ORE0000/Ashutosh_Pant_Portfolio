@@ -1,41 +1,82 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
+:root {
+  --bg: #090917;
+  --bgLight: #1C1E27;
+  --primary: #854CE6;
+  --text_primary: #F2F3F4;
+  --text_secondary: #b1b2b3;
+  --card: #171721;
+  --card_light: #191924;
+  --button: #854CE6;
+  --white: #FFFFFF;
+  --black: #000000;
+  --gradientStart: rgba(133, 76, 230, 0.15);
+  --gradientMid: rgba(133, 76, 230, 0);
+  --gradientEnd: rgba(0, 70, 209, 0.15);
+}
+
+[data-theme="light"] {
+  --bg: #FFFFFF;
+  --bgLight: #f0f0f0;
+  --primary: #7c3aed;
+  --text_primary: #111111;
+  --text_secondary: #48494a;
+  --card: #FFFFFF;
+  --card_light: #f9fafb;
+  --button: #7c3aed;
+  --gradientStart: rgba(124, 58, 237, 0.1);
+  --gradientMid: rgba(124, 58, 237, 0);
+  --gradientEnd: rgba(0, 70, 209, 0.1);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
   font-family: "Poppins", sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 body {
-  margin: 0px !important;
+  margin: 0 !important;
   padding: 0;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg);
+  color: var(--text_primary);
 }
 
-/* width */
+/* Optimize animations */
+@keyframes optimized-slide-up {
+  0% { opacity: 0; transform: translateY(60px) scale(0.8); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes optimized-pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* Optimize scroll behavior */
 ::-webkit-scrollbar {
   width: 4px;
-  height: 80px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
-  background: #222a35;
+  background: var(--bgLight);
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #575c66;
+  background: var(--text_secondary);
   border-radius: 6px;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #626970;
+  background: var(--primary);
 }
 
 ::-webkit-backdrop-filter {
-  blur: 3px saturate(106%);
+  backdrop-filter: blur(3px) saturate(106%);
 }

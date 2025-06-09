@@ -9,14 +9,23 @@ export const darkTheme = {
   button: "#854CE6",
   white: "#FFFFFF",
   black: "#000000",
+  gradientStart: "rgba(133, 76, 230, 0.15)",
+  gradientMid: "rgba(133, 76, 230, 0)",
+  gradientEnd: "rgba(0, 70, 209, 0.15)",
 };
 
 export const lightTheme = {
   bg: "#FFFFFF",
   bgLight: "#f0f0f0",
-  primary: "#be1adb",
+  primary: "#7c3aed",
   text_primary: "#111111",
   text_secondary: "#48494a",
   card: "#FFFFFF",
-  button: "#5c5b5b",
+  card_light: "#f9fafb",
+  button: "#7c3aed",
+  white: "#FFFFFF",
+  black: "#000000",
+  gradientStart: "rgba(124, 58, 237, 0.1)",
+  gradientMid: "rgba(124, 58, 237, 0)",
+  gradientEnd: "rgba(0, 70, 209, 0.1)",
 };
