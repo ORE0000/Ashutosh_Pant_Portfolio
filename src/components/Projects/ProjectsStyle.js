@@ -12,7 +12,7 @@ const slideUpElastic = keyframes`
   }
   80% {
     opacity: 0.95;
-    transform: translateY(5px) scale(0.98) rotateX(1deg);
+    transform: translateY(5px) scale(0.98) rotateX(-1deg);
   }
   100% {
     opacity: 1;
@@ -21,7 +21,7 @@ const slideUpElastic = keyframes`
 `;
 
 // Floating animation for active buttons
-const floatAnimation = keyframes`
+const floatAnimation = keyframes` // eslint-disable-line no-unused-vars
   0%, 100% {
     transform: translateY(0px) scale(1);
   }
