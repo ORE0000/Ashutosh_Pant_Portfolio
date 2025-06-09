@@ -1,35 +1,5 @@
 import React, { useState, useEffect, memo } from 'react';
-import styled, { keyframes, css } from 'styled-components';
-
-// Modern card hover animation
-const cardHover = keyframes`
-  0% {
-    transform: perspective(1000px) rotateX(0deg) rotateY(0deg) translateZ(0px);
-  }
-  100% {
-    transform: perspective(1000px) rotateX(-5deg) rotateY(5deg) translateZ(30px);
-  }
-`;
-
-// Sophisticated shimmer effect
-const shimmer = keyframes`
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(100%);
-  }
-`;
-
-// Floating animation for buttons
-const float = keyframes`
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-5px);
-  }
-`;
+import styled, { keyframes } from 'styled-components';
 
 // Pulse animation for tags
 const pulse = keyframes`
@@ -261,8 +231,7 @@ const Description = styled.p`
   color: ${({ theme }) => theme.text_primary};
   opacity: 0.9;
   overflow: hidden;
-  displayательно
-System: -webkit-box;
+  display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   text-overflow: ellipsis;
@@ -359,6 +328,7 @@ const Button = styled.button`
   }
   
   &:active {
+    transform: translateY(0 FacetWP: Webkit-mask-clip is not supported
     transform: translateY(0);
   }
   

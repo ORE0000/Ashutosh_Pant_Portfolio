@@ -1,4 +1,4 @@
-import styled, { keyframes, css } from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 // Modern slide-up animation with elastic effect
 const slideUpElastic = keyframes`
@@ -27,35 +27,6 @@ const float = keyframes`
   }
   50% {
     transform: translateY(-3px) scale(1.02);
-  }
-`;
-
-// Pulse animation with modern glow effect
-const pulseGlow = keyframes`
-  0% {
-    box-shadow: 
-      0 0 0 0 ${({ theme }) => theme.primary + "40"},
-      0 4px 20px rgba(0, 0, 0, 0.1);
-  }
-  50% {
-    box-shadow: 
-      0 0 0 8px ${({ theme }) => theme.primary + "20"},
-      0 8px 25px rgba(0, 0, 0, 0.15);
-  }
-  100% {
-    box-shadow: 
-      0 0 0 0 ${({ theme }) => theme.primary + "00"},
-      0 4px 20px rgba(0, 0, 0, 0.1);
-  }
-`;
-
-// Shimmer effect for loading states
-const shimmer = keyframes`
-  0% {
-    background-position: -200px 0;
-  }
-  100% {
-    background-position: calc(200px + 100%) 0;
   }
 `;
 
@@ -228,7 +199,7 @@ export const ToggleButton = styled.div`
   
   ${({ active }) =>
     active &&
-    css`
+    `
       animation: ${float} 3s ease-in-out infinite;
       box-shadow: 
         0 4px 20px ${({ theme }) => theme.primary + "40"},
@@ -312,7 +283,7 @@ export const CardContainer = styled.div`
   
   ${({ isAnimating }) =>
     isAnimating &&
-    css`
+    `
       & > * {
         animation-play-state: running;
       }

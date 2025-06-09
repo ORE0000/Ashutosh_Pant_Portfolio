@@ -80,7 +80,7 @@ const Projects = ({ openModal, setOpenModal }) => {
 
     const timer = setTimeout(animateProjects, 100);
     return () => clearTimeout(timer);
-  }, [toggle, filteredProjects.length]);
+  }, [toggle, filteredProjects]);
 
   const handleToggleChange = useCallback((newToggle) => {
     if (newToggle !== toggle) {

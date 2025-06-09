@@ -1,24 +1,6 @@
 import React, { memo } from 'react';
 import { VerticalTimelineElement } from 'react-vertical-timeline-component';
-import styled, { useTheme, keyframes } from 'styled-components';
-
-const cardHover = keyframes`
-  0% {
-    transform: perspective(1000px) rotateX(0deg) rotateY(0deg) translateZ(0px);
-  }
-  100% {
-    transform: perspective(1000px) rotateX(-3deg) rotateY(3deg) translateZ(20px);
-  }
-`;
-
-const shimmer = keyframes`
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(100%);
-  }
-`;
+import styled, { keyframes } from 'styled-components';
 
 const reveal = keyframes`
   from { opacity: 0; transform: translateY(20px); }
@@ -186,8 +168,6 @@ const ItemWrapper = styled.div`
 `;
 
 const ExperienceCard = ({ experience }) => {
-  const theme = useTheme();
-
   return (
     <VerticalTimelineElement
       icon={
@@ -197,7 +177,7 @@ const ExperienceCard = ({ experience }) => {
           alt={experience?.company}
           style={{ borderRadius: "50%", objectFit: "cover", transition: "filter 0.4s ease" }}
           src={experience?.img}
-          loading="lazy" // Lazy load images
+          loading="lazy"
         />
       }
       contentStyle={{
@@ -210,7 +190,7 @@ const ExperienceCard = ({ experience }) => {
         transition: 'border-right-color 0.3s ease',
       }}
       date={experience?.date}
-      dateClassName="vertical-timeline-element-date" // Ensure date is styled
+      dateClassName="vertical-timeline-element-date"
     >
       <Container>
         <Top>

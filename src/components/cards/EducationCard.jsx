@@ -1,24 +1,6 @@
 import React, { useState, useEffect, useRef, memo } from 'react';
 import { VerticalTimelineElement } from 'react-vertical-timeline-component';
-import styled, { useTheme, keyframes } from 'styled-components';
-
-const cardHover = keyframes`
-  0% {
-    transform: perspective(1000px) rotateX(0deg) rotateY(0deg) translateZ(0px);
-  }
-  100% {
-    transform: perspective(1000px) rotateX(-3deg) rotateY(3deg) translateZ(20px);
-  }
-`;
-
-const shimmer = keyframes`
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(100%);
-  }
-`;
+import styled, { keyframes } from 'styled-components';
 
 const reveal = keyframes`
   from { opacity: 0; transform: translateY(20px); }
@@ -186,7 +168,6 @@ const Span = styled.div`
 `;
 
 const EducationCard = ({ education }) => {
-  const theme = useTheme();
   const [isVisible, setIsVisible] = useState(false);
   const cardRef = useRef(null);
 
